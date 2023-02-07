@@ -1,0 +1,23 @@
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Checkpoints</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      {% for data in datas %}
+        <tr>
+          <td id="check_{{ data.check }}">{{ data.check }}</td>
+          <td id="status_{{ data.status }}">{{ data.status }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <script>
+    setTimeout(function(){
+   window.location.reload();
+}, 1500);
+  
+
+  </script>

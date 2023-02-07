@@ -1,0 +1,27 @@
+
+ 
+
+
+    # data = [
+    #     {
+    #         "id":1,
+    #         "check":"Checkpoint 1",
+    #         "status":"Pass"
+    #     },
+    #     {
+    #         "id":2,
+    #         "check":"Checkpoint 2",
+    #         "status":"Pass"
+    #     },
+    #     {
+    #         "id":3,
+    #         "check":"Checkpoint 3",
+    #         "status":"Skip"
+    #     },
+    #     {
+    #         "id":4,
+    #         "check": "Checkpoint 4",
+    #         "status":"NA"
+    #     }
+
+    # ]
