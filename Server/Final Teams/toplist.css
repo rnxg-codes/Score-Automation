@@ -1,0 +1,49 @@
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Myvideo{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.align-rank{
+    width: 10vw;
+    height: auto;
+    text-align: center;
+}
+
+.line{
+    width: 0px;
+    height: 100vh;
+    border: 2px solid white;
+}
+
+.align{
+    width: 40vw;
+    height: auto;
+    text-align: center;
+}

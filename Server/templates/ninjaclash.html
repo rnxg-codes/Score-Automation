@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ninja.css') }}">
+    <title>Ninja Clash</title>
+</head>
+
+<body>
+    <div style="display: none">
+        <p id="para">3:00</p>
+        <input class="button" id="btnStart" type="button" value="Start" onclick="printDuration();" />
+        <input class="button" id="btnStop" type="button" value="Stop" onclick="stop();" />
+    </div>
+    <!--<div id="clock">
+        Time left = <span id="timer"></span>
+    </div>
+    <button id="GFG_Button" onclick="startTimer()">Start</button>
+    <button id="stop">Stop</button>-->
+    <h1>
+        Ninja Clash
+    </h1>
+    <div class="align">
+        <div class="contain">
+            <h1 id="teamname1">
+                Team Name: {{team1}}
+            </h1>
+            <div class="al">
+                <h2 class="score">
+                    Score :
+                </h2>
+                <p id="s1"></p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="contain">
+            <h1 class="right" id="teamname2">
+                Team Name: {{team2}}
+            </h1>
+            <div class="al">
+                <h2 class="score right">
+                    Score :
+                </h2>
+                <p id="s2"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var check = null;
+
+        function printDuration() {
+            if (check == null) {
+                var cnt = 3 + ":" + 00;
+                var m = 3;
+                var s = 00;
+
+                check = setInterval(function () {
+                    cnt += 1;
+                    if( s == 00 ){
+                    s = 60;
+                    m -= 1;
+                }
+                    s -= 1;
+                    document.getElementById("para").innerHTML = m + ":" + s;
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            clearInterval(check);
+            check = null;
+
+        }
+    </script>
+    <script>
+        const api_url = 
+      "http://192.168.77.190:5000/PackRunner/api/21";
+  
+// Defining async function
+async function getapi(url) {
+    
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    // if (response) {
+    //     hideloader();
+    // }
+    show(data);
+}
+// Calling that async function
+// Function to hide the loader
+
+// Function to define innerHTML for HTML table
+function show(data) {
+
+    // Loop to access all rows 
+ 
+    // Setting innerHTML as tab variable
+    document.getElementById("s1").innerText = data.score1;
+    document.getElementById("s2").innerText = data.score2;
+}
+
+getapi(api_url);
+setTimeout(function(){
+   window.location.reload(1);
+}, 2000);
+    </script>
+    <!-- <script>
+
+        function apiCall(){
+         fetch('http://192.168.111.190:5000/PackRunner/api/1').then(response=>response.json()).then(json=>console.log(json)).catch(err=>console.log("Request fail",err))
+        }
+
+        // const api_url =
+        //     "http://192.168.111.190:5000/PackRunner/api/1";
+
+
+    //    async function getapi(url) {
+
+
+    //        const response1= fetch(url).then(response => {
+    //             console.log(response)
+    //         });
+    //         console.log("Success")
+    //         // Storing data in form of JSON
+    //         var data = await response.json();
+    //         console.log(data);
+    //         if (response) {
+    //             hideloader();
+    //         }
+    //         show(response1);
+    //     }
+    apiCall()   
+        // getapi(api_url);
+
+
+        function hideloader() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        function show(data) {
+
+
+            for (let r of data.list) {
+                tab += `<tr> 
+    <td>${r.name} </td>
+    <td>${r.office}</td>
+    <td>${r.position}</td> 
+    <td>${r.salary}</td>          
+</tr>`;
+            }
+
+            document.getElementById("employees").innerHTML = tab;
+        }
+    </script> -->
+    <!--<script>
+        
+        let btn = document.querySelector("#stop");
+        document.getElementById('timer').innerHTML = 03 + ":" + 00;
+
+        let int = null;
+
+        function startTimer(){
+            var presentTime = document.getElementById('timer').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){
+                m=m-1;
+            }
+            if(m<0){
+                return 0;
+            }
+  
+            document.getElementById('timer').innerHTML = m + ":" + s;
+            console.log(m);
+            setTimeout(startTimer, 1000);
+
+            
+        }
+
+        document.getElementById("stop").addEventListener("click", ()=>{
+                clearInterval(int);
+            });
+        /*$("#GFG_Button").click(function event(){
+            var presentTime = document.getElementById('timer').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){
+                m=m-1;
+            }
+            if(m<0){
+                return 0;
+            }
+  
+            document.getElementById('timer').innerHTML = m + ":" + s;
+            console.log(m);
+            setTimeout(startTimer, 1000);
+        });*/
+
+
+        function checkSecond(sec) {
+            if (sec < 10 && sec >= 0) {
+                sec = "0" + sec;
+            }
+            if (sec < 0) {
+                sec = "59";
+            };
+            return sec;
+        }
+    </script>-->
+</body>
+
+</html>

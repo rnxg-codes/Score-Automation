@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Score Board</title>
+  </head>
+  <body>
+    <img src="/static/bgimage.jpg" alt="">
+    <div class="container-lg">
+        <h1>PacRunner</h1>      
+        <h2>Team : {{team}}</h2>
+        <div class="boxes">
+          {% for data in scores %}
+          <div class = "{{ data.status }} box" id={{data.id}}>
+            <div class="cpt">{{ data.check }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="score">
+        </div>
+        <script>
+        setTimeout(function () {
+          window.location.reload();
+        }, 1500);
+      </script>
+    </div>
+  </body>
+</html>
