@@ -1,6 +1,6 @@
 # Security Policy
 
-## 1. Introduction
+## Introduction
 
 This project is provided as-is and without any guarantee of code reliability, stability, or security. 
 This policy outlines the practices and responsibilities regarding the use, security, and maintenance of the software.
@@ -10,7 +10,7 @@ This policy outlines the practices and responsibilities regarding the use, secur
 Vulnerability Reporting: Users who identify potential security vulnerabilities are encouraged to report them to github page. However, there is no guarantee that any reported issues will be addressed.
 Incident Response: This Project does not provide a formal incident response process. Users are responsible for their own incident management and response strategies.
 
- ## Legal Disclaimer
+## Legal Disclaimer
 
 No Warranty: This project is provided with no warranty of any kind, express or implied. The software is provided on an "as-is" basis, and the developers disclaim all responsibility for any loss or damage resulting from its use.
 
