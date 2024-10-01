@@ -7,6 +7,9 @@
 
 The project aimed to address these by implementing an automated system that could seamlessly monitor the status of participants', checkpoints and provide real-time updates to participants
 
+## Prototype
+![prototype 1](https://github.com/rnxg-codes/Score-Automation/blob/Final/ScreenShots/prototypes.png?raw=True)
+
 ## Installation
 
 #### Server setup
@@ -62,12 +65,12 @@ python .\Server-Excel.py
 
 ## Authors
 
-- [Pallavi Phunde (SY EXTC)](https://github.com/pallaviphunde2003)
-- [Saurav Kharat (SY EXTC)](https://github.com/alpharosto)
-- [Shantanu Pande (FY EXTC)](https://github.com/iam7t9)
-- [Shivam Kurhekar (FY EXTC)](https://www.github.com/rnxg-codes)
-- [Rushikesh Pole (FY CSE)](https://www.github.com/rnxg-codes)   
-- [Varad Wayal (FY EXTC)](https://www.github.com/rnxg-codes)   
+- [Pallavi Phunde (Final Year EXTC)](https://github.com/pallaviphunde2003)
+- [Saurav Kharat (Final Year EXTC)](https://github.com/alpharosto)
+- [Shantanu Pande (TY EXTC)](https://github.com/iam7t9)
+- [Shivam Kurhekar (TY EXTC)](https://www.github.com/rnxg-codes)
+- [Rushikesh Pole (TY CSE)](https://www.github.com/rnxg-codes)   
+- [Varad Wayal (TY EXTC)](https://www.github.com/rnxg-codes)   
 
 
 ## Contributing
